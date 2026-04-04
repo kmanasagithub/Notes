@@ -1,22 +1,31 @@
-ultithreading
+# Java Multithreading Interview Notes
 
-What is Synchronization in Java?
-Synchronization is a locking mechanism in java which will be achieved using synchronize keyword.
-It ensures that at a given point of time only one thread can access the critical section.
+## 🔹 1. What is Synchronization in Java?
+Synchronization is a locking mechanism in Java achieved using the `synchronized` keyword.  
+It ensures that only **one thread can access the critical section at a time**.
 
-Why Synchronization is needed?
+---
+
+## 🔹 2. Why Synchronization is Needed?
 Without synchronization:
-Multiple threads access same data simultaneously
-Leads to race condition
-Data becomes inconsistent
+- Multiple threads access the same data simultaneously  
+- Leads to **race conditions**  
+- Data becomes **inconsistent**
 
-Types of Synchronization:
-a. Method Synchronization: Entire method is locked for one thread at a time.
+---
+
+## 🔹 3. Types of Synchronization
+
+### a. Method Synchronization
+Entire method is locked for one thread at a time.
+```java
 synchronized void display() {
-// critical section
+    // critical section
 }
 
-b. Block Synchronization: Only a specific block of code is synchronized.
+### b. Block Synchronization:
+Only a specific block of code is synchronized.
+```java
 void display() {
 synchronized(this) {
 // critical section
