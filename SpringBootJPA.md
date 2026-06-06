@@ -454,16 +454,3 @@ JPA creates:
 
 ```
 
-## Q14. What is the difference between Enum and String?
-
-### Answer
-
-| String            | Enum                   |
-| ----------------- | ---------------------- |
-| Any value allowed | Only predefined values |
-| Error-prone       | Type-safe              |
-| No validation     | Built-in validation    |
-| Less readable     | More readable          |
-
-
-
