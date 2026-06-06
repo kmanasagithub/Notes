@@ -452,44 +452,6 @@ JPA creates:
 | 1       | USER  |
 | 1       | ADMIN |
 
-
-### Gender
-
-```java
-public enum Gender {
-    MALE,
-    FEMALE,
-    OTHER
-}
-```
-
-### Role
-
-```java
-public enum Role {
-    USER,
-    ADMIN
-}
-```
-
-### Booking Status
-
-```java
-public enum BookingStatus {
-    PENDING,
-    CONFIRMED,
-    CANCELLED
-}
-```
-
-### Payment Status
-
-```java
-public enum PaymentStatus {
-    PENDING,
-    SUCCESS,
-    FAILED
-}
 ```
 
 ## Q14. What is the difference between Enum and String?
