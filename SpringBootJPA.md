@@ -7,7 +7,6 @@
 
 It helps us group related fields together and keep our code clean.
 
----
 
 ## Why do we use @Embedded?
 
@@ -33,8 +32,6 @@ public class Employee {
 
 This works, but it is difficult to maintain.
 
----
-
 ## Using @Embeddable
 
 Create a separate Address class:
@@ -53,8 +50,6 @@ public class Address {
 ```
 
 The `@Embeddable` annotation tells JPA that this class can be embedded into another entity.
-
----
 
 ## Using @Embedded
 
@@ -77,7 +72,6 @@ public class Employee {
 
 The `@Embedded` annotation tells JPA to include all fields of Address inside the Employee table.
 
----
 
 ## Database Table Structure
 
@@ -91,7 +85,6 @@ Employee table:
 
 Notice that all Address fields are stored in the Employee table itself.
 
----
 
 ## Difference Between @Embedded and @OneToOne
 
@@ -110,7 +103,6 @@ employees
 
 Only one table is created.
 
----
 
 ### @OneToOne
 
@@ -128,8 +120,6 @@ addresses
 
 Two tables are created and linked using a foreign key.
 
----
-
 ## When Should We Use @Embedded?
 
 Use `@Embedded` when:
@@ -145,8 +135,6 @@ Examples:
 * Contact Information
 * Coordinates
 * Bank Details
-
----
 
 ## Real-World Example
 
@@ -176,8 +164,6 @@ public class Employee {
 ```
 
 This is commonly used in enterprise applications.
-
----
 
 ## Interview Answer
 
@@ -219,8 +205,6 @@ public enum Gender {
 ```
 
 Only these values can be used.
-
----
 
 ## Q2. Why do we use Enums?
 
@@ -267,8 +251,6 @@ Benefits:
 * Fewer Bugs
 * Compile-Time Validation
 
----
-
 ## Q3. How do we create an Enum?
 
 ### Answer
@@ -279,8 +261,6 @@ public enum Role {
     ADMIN
 }
 ```
-
----
 
 ## Q4. How do we use an Enum in an Entity?
 
@@ -298,8 +278,6 @@ public class User {
 }
 ```
 
----
-
 ## Q5. What is @Enumerated?
 
 ### Answer
@@ -312,8 +290,6 @@ Example:
 @Enumerated(EnumType.STRING)
 private Role role;
 ```
-
----
 
 ## Q6. What are the types of @Enumerated?
 
@@ -351,7 +327,6 @@ Database:
 | USER  | USER         |
 | ADMIN | ADMIN        |
 
----
 
 ## Q7. Which EnumType should we use?
 
@@ -368,8 +343,6 @@ Reason:
 * Easy to read
 * Safe when Enum values change
 * Commonly used in real projects
-
----
 
 ## Q8. Why is EnumType.ORDINAL dangerous?
 
@@ -411,7 +384,6 @@ ADMIN = 2
 
 Existing database records become incorrect.
 
----
 
 ## Q9. What is @ElementCollection?
 
@@ -431,8 +403,6 @@ Example:
 @ElementCollection
 private Set<Role> roles;
 ```
-
----
 
 ## Q10. Why do we use @ElementCollection with Enum?
 
@@ -456,8 +426,6 @@ Example:
 USER
 ADMIN
 ```
-
----
 
 ## Q11. What database tables are created for this code?
 
@@ -483,8 +451,6 @@ JPA creates:
 | ------- | ----- |
 | 1       | USER  |
 | 1       | ADMIN |
-
----
 
 
 ### Gender
@@ -525,8 +491,6 @@ public enum PaymentStatus {
     FAILED
 }
 ```
-
----
 
 ## Q14. What is the difference between Enum and String?
 
